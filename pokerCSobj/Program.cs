@@ -8,7 +8,7 @@ namespace pokerCSobj
 {
     public class Program
     {
-        public int nr_pl = 0;
+        //public int nr_pl = 0;
         static void Main(string[] args)
         {
             Round round1 = new Round();

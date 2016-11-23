@@ -13,7 +13,6 @@ namespace pokerCSobj
 
         public Dice()
         {
-            
             vault = rnd.Next(1, 7);
             System.Threading.Thread.Sleep(10);
             Console.Write("[ {0} ]", vault);
