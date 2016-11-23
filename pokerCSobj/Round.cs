@@ -23,13 +23,24 @@ namespace pokerCSobj
         }
         public void win()
         {
-            int ctrl = 5;
+            int first = 0, second = 0, third = 0;
             for (int i = 0; i < nr_p; i++)
             {
-                if(ctrl < players[i].sum)
-                {
-
-                }
+                if (first < players[i].sum) first = players[i].sum;
+            }
+            for (int i = 0; i < nr_p; i++)
+            {
+                if (first == players[i].sum) players[i].score += 2;
+                if (second < players[i].sum && first > players[i].sum) second = players[i].sum;
+            }
+            for(int i = 0; i < nr_p; i++)
+            {
+                if (second == players[i].sum) players[i].score += 1;
+                if (third < players[i].sum && first > players[i].sum) third = players[i].sum;
+            }
+            for(int i = 0; i < nr_p; i++)
+            {
+                if (third > players[i].sum) players[i].score -= 1;
             }
         }
     }
